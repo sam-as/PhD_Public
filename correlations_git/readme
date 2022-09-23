@@ -1,0 +1,5 @@
+The code is only for getting the correlation values and plotting a seaborn heatmap. 
+Change the location of the datafile and call the function!
+
+Requirements:
+Seaborn, scipy, Pandas, Matplotlib
