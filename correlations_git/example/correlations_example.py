@@ -55,9 +55,7 @@ def corr_plot(data, type, image, excel):
     # type denotes 'spearman'/'pearson'
     # image = 0 if image is to be saved else 1 if image is not to be saved
     # excel = 0 if excel file is to be created or else 1 if we dont need it
-
-    data = da 
-
+    
     #getting the pvalues and rvalues 
     if type == 'spearman':
         p=data.corr(method=spearman_pval, min_periods=1)
