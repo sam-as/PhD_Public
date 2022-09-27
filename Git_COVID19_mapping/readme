@@ -1,3 +1,7 @@
+This folder contains the shapefile of Indian state boundaries and the COVID-19 data.
+The python code will make a scatter plot + choropleth.
+
+
 Python – install from python.org/downloads 
 Click on add to Path
 
