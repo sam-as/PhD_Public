@@ -5,10 +5,9 @@ Use Pip to install Pandas, Matplotlib and Seaborn
   For ex: pip install pandas
   
 For Geopandas, libraries – GDAL & Fiona is required
-  Install GDAL first and then Fiona.
   Pip direct method doesn’t work
-  We will download wheel file and use pip. 
-  Website: Archived: https://www.lfd.uci.edu/~gohlke/pythonlibs/  
-  Copy the location of the downloaded wheel package and use pip
-    Run a similar code on the command prompt: pip install C:\\Users\\----\\Downloads\\gdal-1.6.0-cp310-cp310-win_amd64.whl
+  We will download wheel file of GDAL first and then Fiona from Website: https://www.lfd.uci.edu/~gohlke/pythonlibs/  
+  Copy the location where the wheel file has been downloaded and use pip.
+  Run a similar code on the command prompt: pip install C:\\Users\\----\\Downloads\\gdal-1.6.0-cp310-cp310-win_amd64.whl
+  Remember the GDAL and Fiona downloaded should be of the same version that you have your python installed.
 
