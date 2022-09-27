@@ -5,7 +5,7 @@ The python code will make a scatter plot + choropleth.
 Python – install from python.org/downloads 
 Click on add to Path
 
-Use Pip to install Pandas, Matplotlib and Seaborn
+Use Pip to install Pandas, Matplotlib and Seaborn on the Windows Command Prompt.
   For ex: pip install pandas
   
 For Geopandas, libraries – GDAL & Fiona is required
