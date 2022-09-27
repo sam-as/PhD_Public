@@ -1,0 +1,12 @@
+Python – install from Download Python | Python.org
+Click on add to Path
+Use Pip to install Pandas, Matplotlib and Seaborn
+For ex: pip install pandas
+For Geopandas, libraries – GDAL & Fiona is required
+Install GDAL first and then Fiona.
+Pip direct method doesn’t work
+We will download wheel file and use pip. 
+Website: Archived: https://www.lfd.uci.edu/~gohlke/pythonlibs/  
+Copy the location of the downloaded wheel package and use pip
+pip install C:\\Users\\Avik\\Downloads\\gdal-1.6.0-cp310-cp310-win_amd64.whl
+
