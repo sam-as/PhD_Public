@@ -2,7 +2,7 @@
 #%% importing the library and reading the data
 
 import pandas as pd
-df=pd.read_excel(r"C:\Users\aviks\OneDrive\Desktop\MSc Projects\Stage 3\NMR\Final\water_methanol_final_combined_07Feb22.xlsx")
+df=pd.read_excel(r"///////////////2.xlsx")
 print(df)
 
 #%% setting the context
@@ -10,10 +10,6 @@ print(df)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.max_rows', 100)
 df.columns
-
-#%% indexing the required parameters
-#data=df[['H-C', 'H-C-C=', 'H-C-O', 'H-Ar', 'H-C-C=O', 'S', 'H-C(t)', 'H-C-C=(t)',
-       #'H-C-O(t)', 'H-Ar(t)', 'H-C-C=O(t)', 'S(t)']]
 
 data=df
 
@@ -26,6 +22,6 @@ def outlier_remover(df):
     return outliers
 
 #%% exporting the data
-outlier_remover(data).to_excel(r"C:\Users\aviks\OneDrive\Desktop\MSc Projects\Stage 3\NMR\Final\outliers.xlsx")
+outlier_remover(data).to_excel(r"/////////////outliers.xlsx")
 #outlier_remover(data)
 # %%
