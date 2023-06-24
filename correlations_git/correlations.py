@@ -39,9 +39,7 @@ df=pd.DataFrame()
 
 #create the output excel file 
 # we will name a file here and create a path 
-ofile1 = '_correlation_AS.xlsx' 
-
-opath1 = os.path.join(ofolder1,  ofile1) # change accordingly
+opath1 = r".xlsx"
 
 df.to_excel(opath1, sheet_name='dummy')
 
