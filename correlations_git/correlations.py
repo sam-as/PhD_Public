@@ -96,10 +96,9 @@ def corr_plot(data, type, image, excel):
     plt.yticks(rotation=0)
 
     if image == 0:
-        image_name=input('Enter the desired output name:') 
-        savepath = os.path.join(ofolder1) #change folder or folder2
+        savepath = r".png" #change the path for your own computer!
         plt.tight_layout()
-        plt.savefig(savepath+f'\{image_name}', dpi=400)
+        plt.savefig(savepath, dpi=300)
 
     plt.tight_layout()
     plt.show()
