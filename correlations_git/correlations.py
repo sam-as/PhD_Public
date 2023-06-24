@@ -19,6 +19,10 @@ da = da.dropna() # or
 # you can apply fillna()
 # da = da.fillna(da.mean()) # you may use da.median() OR da.quantile(0.10) OR da.min() 
 
+## Ideally, columns having categorical data should be removed
+COLS_list = [] # column names should be in strings # add the names of the columns you want to remove 
+da = da.drop(COLS_list, axis = 1) 
+
 #%% defining the functions that will calculate the coefficients
 # in this code, we will be calculating the pearson and spearman coefficients
 
