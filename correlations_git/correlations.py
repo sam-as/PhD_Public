@@ -11,7 +11,7 @@ import os
 sns.set(style="white", font_scale=1.25)
 
 # reading the data
-path = r.xlsx"
+path = r".xlsx"
 da = pd.read_excel(path, sheet_name='') # insert the sheet name here 
 
 #%% cleaning the data
