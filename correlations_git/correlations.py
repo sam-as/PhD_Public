@@ -8,16 +8,10 @@ from scipy.stats import pearsonr, spearmanr
 import os
 
 #%%setting the context
-sns.set(style="white", font_scale=1.5)
+sns.set(style="white", font_scale=1.25)
 
-#%%reading the sheet names from datafile
-#main folder
-ofolder1 = r"C:\Users\Avik\-----"  # add the full path
-#datafiles
-datafile = "-----.xlsx"
-#creating seperate paths 
-path = os.path.join(ofolder1, datafile)
-#print(path2)
+# reading the data
+path = r.xlsx"
 da = pd.read_excel(path, sheet_name='') # insert the sheet name here 
 
 #%% cleaning the data
