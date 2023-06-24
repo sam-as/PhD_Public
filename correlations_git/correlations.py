@@ -15,7 +15,9 @@ path = r".xlsx"
 da = pd.read_excel(path, sheet_name='') # insert the sheet name here 
 
 #%% cleaning the data
-da = da.dropna()
+da = da.dropna() # or
+# you can apply fillna()
+# da = da.fillna(da.mean())
 
 #%% defining the functions that will calculate the coefficients
 # in this code, we will be calculating the pearson and spearman coefficients
