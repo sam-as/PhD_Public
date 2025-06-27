@@ -87,6 +87,72 @@ plt.savefig(spath2, dpi = 300)
 plt.show()
 
 #%% Plot 2
+def cumulativeplot( data, save, nc ):
+    # data should be normalised as done earlier
+    # save should be O or ! i.e., 1 for saving
+    # nc denotes the number of components decided for the pca analysis
+
+    data = data
+    nc = nc + 1 # n+1 where n is the no of components
+
+    variance_sum =[]
+    # iterating till the next limit
+    for i in range(nc):
+
+        #calling the class pca
+        pca=PCA(n_components=i)
+        #fitting and transforming the normalised data
+        pca_ft = pca.fit_transform(data)
+        #appending and adding the explained variance
+        var=pca.explained_variance_ratio_
+        add = np.cumsum(var)
+
+    variance_sum.append(add)
+    #print(nc)
+
+    ncf = range(nc-1) # the actual number of components
+    print(ncf)
+    print('the variance is', var)
+    print('cumulative variance explained is', add)
+
+    # creating a dataframe
+    pdf = pd.DataFrame(data = {
+            'nc' : ncf, 
+            'sum' :add,
+            'variance' : var}, 
+            columns = ['nc', 'sum', 'variance'])
+
+    print(pdf)
+    
+    # initialing the plot function
+    fig, ax=plt.subplots(figsize = (10,10))
+    #for plotting we create a new variable
+    pdf['components'] = pdf['nc'] +1 
+    #plotting the points first
+    sns.pointplot(x='components', 
+        y='sum', 
+        data=pdf, markers='p', 
+        color='red', ax=ax)
+    sns.barplot(x='components', 
+        y='variance', data=pdf, 
+        ec='black', fc='white', ax=ax)
+    plt.xlabel('Number of Principal Components')
+    plt.ylabel('Variance in fractions')
+    ax.legend(labels=['Cumulative explained variance in fractions'], 
+        labelcolor='red', fontsize='small')
+    
+    if save==1:
+        path1 = os.path.join(folder, ifolder)
+        plt.savefig(path1 + f'\{image_name1}')
+        plt.show()
+    else:
+        plt.show()
+
+# %% running the cumulative plot function
+cumulativeplot(data = X_norm, save = 0 , nc=4)
+
+
+#%% Plot 3
 ##### Number of components: n ####
 pca=PCA(n_components=4) # Select the number of components
     
