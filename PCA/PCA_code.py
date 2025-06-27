@@ -7,6 +7,7 @@ Webpage: https://sites.google.com/view/aviksam
 #%%
 # importing the libraries
 import pandas as pd
+import numpy as np
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -135,15 +136,15 @@ def cumulativeplot( data, save, nc ):
         color='red', ax=ax)
     sns.barplot(x='components', 
         y='variance', data=pdf, 
-        ec='black', fc='white', ax=ax)
+        color = 'lightgrey', ax=ax)
     plt.xlabel('Number of Principal Components')
     plt.ylabel('Variance in fractions')
     ax.legend(labels=['Cumulative explained variance in fractions'], 
         labelcolor='red', fontsize='small')
     
     if save==1:
-        path1 = os.path.join(folder, ifolder)
-        plt.savefig(path1 + f'\{image_name1}')
+        path = r'' #this should have an '.png' extension
+        plt.savefig(path)
         plt.show()
     else:
         plt.show()
