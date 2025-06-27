@@ -28,7 +28,11 @@ def outlier_remover(df, column_name):
     data_noout = df[(df[column_name] >= lower_bound) & (df[column_name] <= upper_bound)]
     return data_noout
 
-df1 = df.apply(outlier_remover, 'col')
+df1 = df.apply(outlier_remover, 'col') # change the column name 
+
+# if outlier removal is not needed:
+# Uncomment below and comment the above code on line 31. 
+# df1 = df.copy()
 
 #%%
 # setting up the data
